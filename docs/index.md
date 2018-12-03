@@ -263,6 +263,8 @@ Les mouvement SQL est proétiforme et se caractérise avant tout par une recherc
 * Simples à installer (...)
 * Transfert du contrôle de cohérence vers l'application
 
+--
+
 .center[.big[.quote[La base de données n'est plus la garante de l'intégrité]]]
 
 ---
@@ -1921,12 +1923,12 @@ dans notre contexte ESR
 ---
 class: splash middle center
 
-# La version community est-elle insuffisante ?
+# La version community est-elle suffisante ?
 
 TLDR; **Pas vraiment**
 
 ---
-# La version community est-elle insuffisante ?
+# La version community est-elle suffisante ?
 ## Des fonctionnalités critiques manquantes
 
 Comparatif (https://neo4j.com/subscriptions/)
@@ -1939,19 +1941,19 @@ Comparatif (https://neo4j.com/subscriptions/)
 * Node Key schema constraints
 
 ---
-# La version community est-elle insuffisante ?
+# Ce qui fâche ?
 
 ## Des rapports troubles avec la communauté OpenSource
 * Retrait des versions _Enterprise_ depuis la [version 3.3.0](https://blog.igovsol.com/2017/11/14/Neo4j-330-is-out-but-where-are-the-open-source-enterprise-binaries.html) 
 
 ## Une politique tarifaire obscure
-* Uniquement sur rendez-vous commercial
-* Impossible à budgétiser dans notre contexte
+* Uniquement sur rendez-vous commercial,
+* Impossible à budgétiser dans notre contexte.
 
 .big[.quote[Possibilité de bénéficier de la licence EDU en cours d'étude]]
 
 ---
-# Les solutions libres 
+# Les solutions Enterprise libres 
 
 ## Open Native Graph DB
 https://www.graphfoundation.org/projects/ongdb/
@@ -1970,7 +1972,7 @@ Pour tester
 ```
 
 ---
-# Les solutions libres 
+# Les solutions Enterprise libres 
 
 ## Graph Stack io
 https://graphstack.io/
@@ -1988,11 +1990,14 @@ docker run \
 class: inverse middle
 # Conclusion
 
-* Une approche libératrice pour toute une classe de problèmes
-* Un produit mature et séduisant
-* Une communauté motrice
-* Une politique commerciale inquiétante
+* Une approche libératrice pour toute une classe de problèmes,
+* Un produit mature et séduisant,
+* Une communauté motrice,
+* Une politique commerciale qui ignore le contexte ESR.
 
+
+---
+class: inverse middle center
 # Merci 
 
 ---
