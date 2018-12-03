@@ -1,0 +1,74 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../vis/vis.js"></script>
+      <link href="../vis/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id="7b7fc803-59f9-43b2-9c78-9cba68caec5f"></div>
+    <div id="configure"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": "Elizabeth Herman", "label": "Elizabeth Herman", "group": "Person"}, {"id": "Jean Larson", "label": "Jean Larson", "group": "Person"}, {"id": "Darlene Herman", "label": "Darlene Herman", "group": "Person"}, {"id": "Heloise Dubois", "label": "Heloise Dubois", "group": "Person"}, {"id": "Cosette Audet", "label": "Cosette Audet", "group": "Person"}, {"id": "Melodie Dubois", "label": "Melodie Dubois", "group": "Person"}, {"id": "Sophie Laforest", "label": "Sophie Laforest", "group": "Person"}, {"id": "Bruce Larson", "label": "Bruce Larson", "group": "Person"}, {"id": "Optique", "label": "Optique", "group": "Service"}, {"id": "M\u00e9canique", "label": "M\u00e9canique", "group": "Service"}, {"id": "Madelene Cousteau", "label": "Madelene Cousteau", "group": "Person"}, {"id": "Roxanne Brochu", "label": "Roxanne Brochu", "group": "Person"}, {"id": "Arlette Bienvenue", "label": "Arlette Bienvenue", "group": "Person"}, {"id": "Josette Laforest", "label": "Josette Laforest", "group": "Person"}, {"id": "Lotye Cousteau", "label": "Lotye Cousteau", "group": "Person"}, {"id": "Albertine Desnoyers", "label": "Albertine Desnoyers", "group": "Person"}, {"id": "Vera Herman", "label": "Vera Herman", "group": "Person"}, {"id": "Matilda Audet", "label": "Matilda Audet", "group": "Person"}, {"id": "Carine Laforest", "label": "Carine Laforest", "group": "Person"}, {"id": "Val\u00e9rie Laforest", "label": "Val\u00e9rie Laforest", "group": "Person"}, {"id": "Agathe Desnoyers", "label": "Agathe Desnoyers", "group": "Person"}, {"id": "Noelle Dubois", "label": "Noelle Dubois", "group": "Person"}, {"id": "Tracey Herman", "label": "Tracey Herman", "group": "Person"}, {"id": "Marphisa Brochu", "label": "Marphisa Brochu", "group": "Person"}, {"id": "In\u00e8s Cousteau", "label": "In\u00e8s Cousteau", "group": "Person"}, {"id": "Electronique", "label": "Electronique", "group": "Service"}, {"id": "Andr\u00e9e Laforest", "label": "Andr\u00e9e Laforest", "group": "Person"}, {"id": "Valentine Brochu", "label": "Valentine Brochu", "group": "Person"}, {"id": "Jeanette Desnoyers", "label": "Jeanette Desnoyers", "group": "Person"}, {"id": "Mireille Audet", "label": "Mireille Audet", "group": "Person"}, {"id": "Leone Bienvenue", "label": "Leone Bienvenue", "group": "Person"}, {"id": "\u00c9dith Audet", "label": "\u00c9dith Audet", "group": "Person"}, {"id": "Informatique", "label": "Informatique", "group": "Service"}];
+      var edges = [{"from": "Vera Herman", "to": "Informatique"}, {"from": "Jeanette Desnoyers", "to": "Electronique"}, {"from": "Mireille Audet", "to": "Optique"}, {"from": "Roxanne Brochu", "to": "Informatique"}, {"from": "Bruce Larson", "to": "Informatique"}, {"from": "Heloise Dubois", "to": "Electronique"}, {"from": "Marphisa Brochu", "to": "Electronique"}, {"from": "Madelene Cousteau", "to": "M\u00e9canique"}, {"from": "Arlette Bienvenue", "to": "Electronique"}, {"from": "In\u00e8s Cousteau", "to": "Informatique"}, {"from": "Albertine Desnoyers", "to": "M\u00e9canique"}, {"from": "Valentine Brochu", "to": "Electronique"}, {"from": "Agathe Desnoyers", "to": "Electronique"}, {"from": "Andr\u00e9e Laforest", "to": "Informatique"}, {"from": "Val\u00e9rie Laforest", "to": "M\u00e9canique"}, {"from": "Melodie Dubois", "to": "M\u00e9canique"}, {"from": "Carine Laforest", "to": "Informatique"}, {"from": "\u00c9dith Audet", "to": "Optique"}, {"from": "Cosette Audet", "to": "Optique"}, {"from": "Elizabeth Herman", "to": "Informatique"}, {"from": "Leone Bienvenue", "to": "M\u00e9canique"}, {"from": "Josette Laforest", "to": "Electronique"}, {"from": "Lotye Cousteau", "to": "Informatique"}, {"from": "Tracey Herman", "to": "Electronique"}, {"from": "Noelle Dubois", "to": "Informatique"}, {"from": "Jean Larson", "to": "Optique"}, {"from": "Sophie Laforest", "to": "Electronique"}, {"from": "Darlene Herman", "to": "Electronique"}, {"from": "Matilda Audet", "to": "M\u00e9canique"}];
+
+      var container = document.getElementById("7b7fc803-59f9-43b2-9c78-9cba68caec5f");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          configure: {
+            enabled: false,
+            filter: function (option, path) {
+                if (path.indexOf('physics') !== -1) {
+                  return true;
+                }
+                if (path.indexOf('layout') !== -1) {
+                  return true;
+                }
+                if (path.indexOf('smooth') !== -1 || option === 'smooth') {
+                  return true;
+                }
+                return false;
+              },
+            //container: undefined,
+            showButton: true
+          },
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: true,
+              barnesHut: {
+                  centralGravity: 0.1,
+                  springLength: 55
+                  },
+              minVelocity: 0.75
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

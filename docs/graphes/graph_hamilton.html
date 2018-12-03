@@ -1,0 +1,98 @@
+
+<html>
+<head>
+  <script type="text/javascript" src="../js/vis.js"></script>
+  <link href="../css/vis.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../js/draw_network.js"></script>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div id="graph"></div>
+  <div id="configure"></div>
+
+  <script type="text/javascript">
+    var nodes = [
+                { id: "hamilton", label: "Peter F.Hamilton", group: "author"},
+                { id: 0, label: "Escape Route", group: "book" },
+                { id: 1, label: "The naked god", group: "book" },
+                { id: 2, label: "The evolutionary void", group: "book" },
+                { id: 3, label: "Great North Road", group: "book" },
+                { id: 4, label: "The Neutronium Alchemist 2", group: "book" },
+                { id: 5, label: "Naked God, The", group: "book" },
+                { id: 6, label: "The Reality Dysfunction Part I", group: "book" },
+                { id: 7, label: "Judas Unchained", group: "book" },
+                { id: 8, label: "A quantum murder", group: "book" },
+                { id: 9, label: "Lightstorm", group: "book" },
+                { id: 10, label: "The Neutronium Alchemist", group: "book" },
+                { id: 11, label: "Fallen dragon", group: "book" },
+                { id: 12, label: "The Reality Dysfunction, Part 2", group: "book" },
+                { id: 13, label: "The Temporal Void", group: "book" },
+                { id: 14, label: "The Dreaming Void", group: "book" },
+                { id: 15, label: "A Second Chance at Eden", group: "book" },
+                { id: 16, label: "The nano flower", group: "book" },
+                { id: 17, label: "Misspent Youth", group: "book" },
+                { id: 18, label: "The Reality Dysfunction", group: "book" },
+                { id: 19, label: "The Confederation handbook", group: "book" },
+                { id: 20, label: "The reality dysfunction", group: "book" },
+                { id: 21, label: "The Reality Dysfunction Part 2", group: "book" },
+                { id: 22, label: "Mindstar rising", group: "book" },
+                { id: 23, label: "The Naked God, Part 2", group: "book" },
+                { id: 24, label: "The Abyss Beyond Dreams", group: "book" },
+                { id: 25, label: "Judas unchained", group: "book" },
+                { id: 26, label: "Futures", group: "book" },
+                { id: 27, label: "The Web", group: "book" },
+                { id: 28, label: "Manhattan in reverse", group: "book" },
+                { id: 29, label: "Pandora\'s Star", group: "book" }];
+    var edges = [
+                { from: 'hamilton', to: 0},
+                { from: 'hamilton', to: 1},
+                { from: 'hamilton', to: 2},
+                { from: 'hamilton', to: 3},
+                { from: 'hamilton', to: 4},
+                { from: 'hamilton', to: 5},
+                { from: 'hamilton', to: 6},
+                { from: 'hamilton', to: 7},
+                { from: 'hamilton', to: 8},
+                { from: 'hamilton', to: 9},
+                { from: 'hamilton', to: 10},
+                { from: 'hamilton', to: 11},
+                { from: 'hamilton', to: 12},
+                { from: 'hamilton', to: 13},
+                { from: 'hamilton', to: 14},
+                { from: 'hamilton', to: 15},
+                { from: 'hamilton', to: 16},
+                { from: 'hamilton', to: 17},
+                { from: 'hamilton', to: 18},
+                { from: 'hamilton', to: 19},
+                { from: 'hamilton', to: 20},
+                { from: 'hamilton', to: 21},
+                { from: 'hamilton', to: 22},
+                { from: 'hamilton', to: 23},
+                { from: 'hamilton', to: 24},
+                { from: 'hamilton', to: 25},
+                { from: 'hamilton', to: 26},
+                { from: 'hamilton', to: 27},
+                { from: 'hamilton', to: 28},
+                { from: 'hamilton', to: 29},
+];
+
+    options = { 
+      'physics': {
+        "barnesHut": {
+          "gravitationalConstant": -24950,
+          "centralGravity": 0,
+          "springLength": 75,
+          "springConstant": 0.035,
+          "avoidOverlap": 0.75
+        },
+        "minVelocity": 0.48
+      }
+    };
+
+    
+    drawNetwork("graph", nodes, edges,options,true);
+
+  </script>
+</body>
+</html>

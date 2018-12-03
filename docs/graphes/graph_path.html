@@ -1,0 +1,49 @@
+<html>
+<head>
+  <script type="text/javascript" src="../js/vis.js"></script>
+  <link href="../css/vis.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../js/draw_network.js"></script>
+</head>
+<body>
+
+  <div id="graph_path"></div>
+  <div id="configure"></div>
+
+  <script type="text/javascript">
+    var nodes = [
+      {"id": 1, "label": "A" ,"group": 'start'}, 
+      {"id": 2, "label": "B", "group": 'A'},
+      {"id": 3, "label": "C", "group": 'A'},
+      {"id": 4, "label": "D", "group": 'A'},
+      {"id": 5, "label": "E", "group": 'end'},
+    ];
+
+
+    var edges = [
+      {"from": 1, "to": 2, "label": "1"},
+      {"from": 2, "to": 3, "label": "2"},
+      {"from": 3, "to": 4, "label": "3"},
+      {"from": 4, "to": 5, "label": "4"},
+      ];
+
+    options = { 'physics' : { 
+      "hierarchicalRepulsion": {
+        "centralGravity": 0
+      },
+      "minVelocity": 0.75,
+      "solver": "hierarchicalRepulsion"
+    },
+
+    'layout': {
+        "hierarchical": {
+          "enabled": true,
+          "direction": "LR"
+        }
+      }
+    };
+
+    drawNetwork("graph_path", nodes, edges, options, true);
+
+  </script>
+</body>
+</html>

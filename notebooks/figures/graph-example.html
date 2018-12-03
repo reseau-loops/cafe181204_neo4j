@@ -1,0 +1,74 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../vis/vis.js"></script>
+      <link href="../vis/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id="5ecc3615-fb16-40f4-871b-2a2420595cdf"></div>
+    <div id="configure"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": null, "label": null, "group": "Project"}, {"id": null, "label": null, "group": "Project"}, {"id": null, "label": null, "group": "Project"}, {"id": null, "label": null, "group": "Project"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Service"}, {"id": null, "label": null, "group": "Project"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Service"}, {"id": null, "label": null, "group": "Service"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Service"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}, {"id": null, "label": null, "group": "Person"}];
+      var edges = [{"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}, {"from": null, "to": null}];
+
+      var container = document.getElementById("5ecc3615-fb16-40f4-871b-2a2420595cdf");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          configure: {
+            enabled: false,
+            filter: function (option, path) {
+                if (path.indexOf('physics') !== -1) {
+                  return true;
+                }
+                if (path.indexOf('layout') !== -1) {
+                  return true;
+                }
+                if (path.indexOf('smooth') !== -1 || option === 'smooth') {
+                  return true;
+                }
+                return false;
+              },
+            //container: undefined,
+            showButton: true
+          },
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: true,
+              barnesHut: {
+                  centralGravity: 0.1,
+                  springLength: 55
+                  },
+              minVelocity: 0.75
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

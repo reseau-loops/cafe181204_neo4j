@@ -1,0 +1,74 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../vis/vis.js"></script>
+      <link href="../vis/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+    <div id="952abea9-15e8-4f36-b70e-28ba0b2d68b9"></div>
+    <div id="configure"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": "Gringalet", "label": "Gringalet", "group": "Project"}, {"id": "Cymbal", "label": "Cymbal", "group": "Project"}, {"id": "Alpha", "label": "Alpha", "group": "Project"}, {"id": "Csw2000", "label": "Csw2000", "group": "Project"}, {"id": "Tigre", "label": "Tigre", "group": "Project"}];
+      var edges = [];
+
+      var container = document.getElementById("952abea9-15e8-4f36-b70e-28ba0b2d68b9");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          configure: {
+            enabled: false,
+            filter: function (option, path) {
+                if (path.indexOf('physics') !== -1) {
+                  return true;
+                }
+                if (path.indexOf('layout') !== -1) {
+                  return true;
+                }
+                if (path.indexOf('smooth') !== -1 || option === 'smooth') {
+                  return true;
+                }
+                return false;
+              },
+            //container: undefined,
+            showButton: true
+          },
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: true,
+              barnesHut: {
+                  centralGravity: 0.1,
+                  springLength: 55
+                  },
+              minVelocity: 0.75
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

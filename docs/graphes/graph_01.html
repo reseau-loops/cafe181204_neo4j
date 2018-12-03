@@ -1,0 +1,40 @@
+<html>
+<head>
+  <script type="text/javascript" src="../js/vis.js"></script>
+  <link href="../css/vis.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../js/draw_network.js"></script>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div id="graph_01"></div>
+  <div id="configure"></div>
+
+  <script type="text/javascript">
+    var nodes = [
+      {"id": 1, "label": "A"}, 
+      {"id": 2, "label": "B"},
+      {"id": 3, "label": "C"},
+    ];
+
+
+    var edges = [
+      {"from": 1, "to": 2, "arrows": {"to": false }},
+      {"from": 2, "to": 3, "arrows": {"to": false }}
+      ];
+
+    options= { 
+      'physics': { 
+        "hierarchicalRepulsion": {
+          "centralGravity": 0
+        },
+        "minVelocity": 0.75,
+        "solver": "hierarchicalRepulsion"
+      }
+    };
+
+    drawNetwork("graph_01", nodes, edges, options,true);
+
+  </script>
+</body>
+</html>

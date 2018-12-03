@@ -1,0 +1,338 @@
+{
+    "functions": [
+        "chefDeProjet",
+        "developpeur",
+        "utilisateur",
+        "expert"
+    ],
+    "persons": [
+        {
+            "name": "Madelene Cousteau",
+            "projects": [
+                {
+                    "function": "utilisateur",
+                    "name": "Gringalet"
+                }
+            ],
+            "service": "M\u00e9canique"
+        },
+        {
+            "name": "Arlette Bienvenue",
+            "projects": [
+                {
+                    "function": "developpeur",
+                    "name": "Alpha"
+                }
+            ],
+            "service": "Electronique"
+        },
+        {
+            "name": "Roxanne Brochu",
+            "projects": [],
+            "service": "Informatique"
+        },
+        {
+            "name": "Jean Larson",
+            "projects": [
+                {
+                    "function": "utilisateur",
+                    "name": "Csw2000"
+                }
+            ],
+            "service": "Optique"
+        },
+        {
+            "name": "Elizabeth Herman",
+            "projects": [
+                {
+                    "function": "developpeur",
+                    "name": "Cymbal"
+                }
+            ],
+            "service": "Informatique"
+        },
+        {
+            "name": "Heloise Dubois",
+            "projects": [
+                {
+                    "function": "developpeur",
+                    "name": "Cymbal"
+                },
+                {
+                    "function": "utilisateur",
+                    "name": "Tigre"
+                }
+            ],
+            "service": "Electronique"
+        },
+        {
+            "name": "Darlene Herman",
+            "projects": [
+                {
+                    "function": "developpeur",
+                    "name": "Tigre"
+                },
+                {
+                    "function": "chefDeProjet",
+                    "name": "Gringalet"
+                }
+            ],
+            "service": "Electronique"
+        },
+        {
+            "name": "Melodie Dubois",
+            "projects": [
+                {
+                    "function": "utilisateur",
+                    "name": "Cymbal"
+                },
+                {
+                    "function": "utilisateur",
+                    "name": "Tigre"
+                }
+            ],
+            "service": "M\u00e9canique"
+        },
+        {
+            "name": "Cosette Audet",
+            "projects": [
+                {
+                    "function": "utilisateur",
+                    "name": "Tigre"
+                }
+            ],
+            "service": "Optique"
+        },
+        {
+            "name": "Bruce Larson",
+            "projects": [
+                {
+                    "function": "developpeur",
+                    "name": "Gringalet"
+                }
+            ],
+            "service": "Informatique"
+        },
+        {
+            "name": "Sophie Laforest",
+            "projects": [
+                {
+                    "function": "utilisateur",
+                    "name": "Cymbal"
+                }
+            ],
+            "service": "Electronique"
+        },
+        {
+            "name": "Lotye Cousteau",
+            "projects": [],
+            "service": "Informatique"
+        },
+        {
+            "name": "Josette Laforest",
+            "projects": [
+                {
+                    "function": "chefDeProjet",
+                    "name": "Tigre"
+                },
+                {
+                    "function": "developpeur",
+                    "name": "Csw2000"
+                }
+            ],
+            "service": "Electronique"
+        },
+        {
+            "name": "Vera Herman",
+            "projects": [
+                {
+                    "function": "developpeur",
+                    "name": "Alpha"
+                },
+                {
+                    "function": "utilisateur",
+                    "name": "Cymbal"
+                },
+                {
+                    "function": "utilisateur",
+                    "name": "Csw2000"
+                }
+            ],
+            "service": "Informatique"
+        },
+        {
+            "name": "Albertine Desnoyers",
+            "projects": [
+                {
+                    "function": "expert",
+                    "name": "Alpha"
+                },
+                {
+                    "function": "utilisateur",
+                    "name": "Cymbal"
+                },
+                {
+                    "function": "developpeur",
+                    "name": "Gringalet"
+                }
+            ],
+            "service": "M\u00e9canique"
+        },
+        {
+            "name": "Carine Laforest",
+            "projects": [],
+            "service": "Informatique"
+        },
+        {
+            "name": "Matilda Audet",
+            "projects": [],
+            "service": "M\u00e9canique"
+        },
+        {
+            "name": "Val\u00e9rie Laforest",
+            "projects": [
+                {
+                    "function": "utilisateur",
+                    "name": "Tigre"
+                },
+                {
+                    "function": "developpeur",
+                    "name": "Csw2000"
+                }
+            ],
+            "service": "M\u00e9canique"
+        },
+        {
+            "name": "Noelle Dubois",
+            "projects": [
+                {
+                    "function": "expert",
+                    "name": "Csw2000"
+                },
+                {
+                    "function": "developpeur",
+                    "name": "Gringalet"
+                }
+            ],
+            "service": "Informatique"
+        },
+        {
+            "name": "Tracey Herman",
+            "projects": [
+                {
+                    "function": "expert",
+                    "name": "Csw2000"
+                },
+                {
+                    "function": "developpeur",
+                    "name": "Gringalet"
+                }
+            ],
+            "service": "Electronique"
+        },
+        {
+            "name": "Marphisa Brochu",
+            "projects": [
+                {
+                    "function": "chefDeProjet",
+                    "name": "Alpha"
+                }
+            ],
+            "service": "Electronique"
+        },
+        {
+            "name": "In\u00e8s Cousteau",
+            "projects": [],
+            "service": "Informatique"
+        },
+        {
+            "name": "Agathe Desnoyers",
+            "projects": [],
+            "service": "Electronique"
+        },
+        {
+            "name": "Valentine Brochu",
+            "projects": [],
+            "service": "Electronique"
+        },
+        {
+            "name": "Andr\u00e9e Laforest",
+            "projects": [
+                {
+                    "function": "utilisateur",
+                    "name": "Alpha"
+                }
+            ],
+            "service": "Informatique"
+        },
+        {
+            "name": "Mireille Audet",
+            "projects": [
+                {
+                    "function": "expert",
+                    "name": "Alpha"
+                },
+                {
+                    "function": "chefDeProjet",
+                    "name": "Cymbal"
+                },
+                {
+                    "function": "expert",
+                    "name": "Tigre"
+                },
+                {
+                    "function": "utilisateur",
+                    "name": "Gringalet"
+                }
+            ],
+            "service": "Optique"
+        },
+        {
+            "name": "Jeanette Desnoyers",
+            "projects": [
+                {
+                    "function": "developpeur",
+                    "name": "Csw2000"
+                }
+            ],
+            "service": "Electronique"
+        },
+        {
+            "name": "\u00c9dith Audet",
+            "projects": [
+                {
+                    "function": "utilisateur",
+                    "name": "Alpha"
+                },
+                {
+                    "function": "chefDeProjet",
+                    "name": "Csw2000"
+                }
+            ],
+            "service": "Optique"
+        },
+        {
+            "name": "Leone Bienvenue",
+            "projects": [
+                {
+                    "function": "expert",
+                    "name": "Alpha"
+                }
+            ],
+            "service": "M\u00e9canique"
+        }
+    ],
+    "projects": [
+        "Alpha",
+        "Cymbal",
+        "Tigre",
+        "Csw2000",
+        "Gringalet"
+    ],
+    "services": [
+        "Electronique",
+        "Informatique",
+        "Optique",
+        "M\u00e9canique"
+    ]
+}

@@ -1,0 +1,187 @@
+/*
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+*/
+@import url(Yanone-Kaffeesatz.css);
+@import url(Droid-Serif-400-700-400italic.css);
+@import url(Ubuntu-Mono-400-700-400italic.css);
+body { font-family: 'Droid Serif'; }
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: normal;
+}
+
+.remark-slide-content h1 {
+  font-size: 45px;
+}
+
+.remark-slide-content h2 {
+  font-size: 30px;
+}
+
+.remark-slide-content h3 {
+  font-size: 25px;
+} 
+
+/*
+.remark-slide-number {
+ visibility: hidden
+}     
+*/
+
+code {
+  border-radius: 5px;
+}
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+.remark-code-line-highlighted {
+  background-color: rgba(0, 238, 255, 0.5);
+}
+.remark-code-span-highlighted {
+  background-color: rgba(0, 238, 255, 0.5);
+}
+
+.remark-code-line-highlighted .hljs-comment {
+    background-color: aliceblue;
+    color: black;
+}
+.outline-small > pre .remark-code {
+  font-size: 8px;
+}
+.outline-code > pre .remark-code {
+  font-size: 10px;
+}
+.outline-12 > pre .remark-code {
+  font-size: 12px;
+}
+.outline-13 > pre .remark-code {
+  font-size: 13px;
+}
+.outline-14 > pre .remark-code {
+  font-size: 14px;
+}
+.outline-code-medium > pre .remark-code {
+  font-size: 15px;
+}
+.outline-code-qbig > pre .remark-code {
+  font-size: 20px;
+}
+.outline-code-big > pre .remark-code {
+  font-size: 30px;
+}
+.inverse {
+  background: #272822;
+  color: #ffffff;
+  text-shadow: 0 0 20px #333;
+}
+
+.inverse a {
+    color: burlywood;
+}
+
+.splash {
+  background: #2d5986;
+  color: #ffffff;
+  text-shadow: 0 0 20px #333;
+}
+
+.splash a {
+  color: #ffffff;
+}
+
+.splash-tip {
+  background: #2d8686;
+  color: #ffffff;
+  text-shadow: 0 0 20px #862d2d;
+} 
+
+.splash-grey {
+  background: #b4bdb8;
+  color: #242524;
+  text-shadow: 0 0 20px #7d8480;
+}
+
+.splash-grey a {
+    color: #242524;
+}
+
+.refactor {
+  border: 3px dotted #A40902;
+  border-radius: 6px;
+}
+.black_bkg {
+  background: #000000;
+  color: #ffffff;
+  text-shadow: 0 0 20px #333;
+}
+
+.remark-slide > .left { text-align:left;}
+.remark-slide > .center {text-align: center;}
+.remark-slide > .right { text-align:right;}
+.remark-slide > .top { vertical-align:top;}
+.remark-slide > .middle { vertical-align:middle;}
+.remark-slide > .bottom { vertical-align:bottom;}
+.footnote {
+  font-size: 80%;
+  font-weight: 300;
+  position: absolute;
+  bottom: 3em;
+  right: 3em;
+}
+.headnote {
+  font-size: 80%;
+  font-weight: 300;
+  position: absolute;
+  top: 3em;
+  right: 3em;
+}
+.small {
+  font-size: 90%;
+}
+.medium{
+  font-size: 120%;
+}
+.big {
+  font-size: 150%;
+}
+.huge {
+  font-size: 180%;
+}
+.mega-huge {
+  font-size: 200%;
+}
+.red {color:red;}
+.green {color:green;}
+.reminder {
+  border: 3px dotted #A40902;
+  border-radius: 6px;
+  font-size: 150%;
+  padding: 10px;
+}
+.left-column {
+  width: 50%;
+  float: left;
+}
+.left-column * .remark-code {
+  margin-right: 5px;
+}
+.right-column * .remark-code {
+  margin-left: 5px;
+}
+
+.right-column {
+  width: 50%;
+  float: right;
+}
+.reset-column {
+  overflow: auto;
+  width: 100%;
+  display: block;
+} 
+.dialog {
+  text-align:left;
+  font-family:courier, courier new, serif;
+} 
+.quote {
+  font-family: 'Ubuntu Mono';
+}    

@@ -1,0 +1,161 @@
+
+<html>
+<head>
+  <script type="text/javascript" src="../js/vis.js"></script>
+  <link href="../css/vis.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../js/draw_network.js"></script>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div id="graph"></div>
+  <div id="configure"></div>
+
+  <script type="text/javascript">
+    var nodes = [
+{ "id": "CDG", "name": "Paris-Charles de Gaulle", "label": "CDG", "group": "airport" },
+{ "id": "ORY", "name": "Paris-Orly", "label": "ORY", "group": "airport" },
+{ "id": "NCE", "name": "Nice-Côte d'Azur", "label": "NCE", "group": "airport" },
+{ "id": "LYS", "name": "Lyon-Saint-Exupéry", "label": "LYS", "group": "airport" },
+{ "id": "TLS", "name": "Toulouse-Blagnac", "label": "TLS", "group": "airport" },
+{ "id": "MRS", "name": "Marseille-Provence", "label": "MRS", "group": "airport" },
+{ "id": "BSLMLHEAP", "name": "Bâle-Mulhouse-Fribourg", "label": "BSLMLHEAP", "group": "airport" },
+{ "id": "BOD", "name": "Bordeaux-Mérignac", "label": "BOD", "group": "airport" },
+{ "id": "NTE", "name": "Nantes-Atlantique", "label": "NTE", "group": "airport" },
+{ "id": "BVA", "name": "Paris-Beauvais-Tillé", "label": "BVA", "group": "airport" },
+{ "id": "PTP", "name": "Guadeloupe - Pôle Caraïbes", "label": "PTP", "group": "airport" },
+{ "id": "RUN", "name": "La Réunion-R. Garros", "label": "RUN", "group": "airport" },
+{ "id": "FDF", "name": "Martinique Aimé Césaire", "label": "FDF", "group": "airport" },
+{ "id": "LIL", "name": "Lille Lesquin", "label": "LIL", "group": "airport" },
+{ "id": "MPL", "name": "Montpellier-Méditerranée", "label": "MPL", "group": "airport" },
+{ "id": "AJA", "name": "Ajaccio", "label": "AJA", "group": "airport" },
+{ "id": "BIA", "name": "Bastia-Poretta", "label": "BIA", "group": "airport" },
+{ "id": "PPT", "name": "Tahiti-Faaa", "label": "PPT", "group": "airport" },
+{ "id": "SXB", "name": "Strasbourg", "label": "SXB", "group": "airport" },
+{ "id": "BIQ", "name": "Biarritz-Pays Basque", "label": "BIQ", "group": "airport" },
+{ "id": "BES", "name": "Brest-Bretagne", "label": "BES", "group": "airport" },
+{ "id": "FSC", "name": "Figari Sud Corse", "label": "FSC", "group": "airport" },
+{ "id": "RNS", "name": "Rennes-St-Jacques", "label": "RNS", "group": "airport" },
+{ "id": "PUF", "name": "Pau-Pyrénées", "label": "PUF", "group": "airport" },
+{ "id": "NOU", "name": "Nouméa - La Tontouta", "label": "NOU", "group": "airport" },
+{ "id": "CAY", "name": "Cayenne-F. Éboué", "label": "CAY", "group": "airport" },
+{ "id": "TLN", "name": "Toulon-Hyères", "label": "TLN", "group": "airport" },
+{ "id": "LDE", "name": "Tarbes-Lourdes-Pyrénées", "label": "LDE", "group": "airport" },
+{ "id": "GEA", "name": "Nouméa Magenta", "label": "GEA", "group": "airport" },
+{ "id": "PGF", "name": "Perpignan", "label": "PGF", "group": "airport" },
+{ "id": "CCF", "name": "Carcassonne", "label": "CCF", "group": "airport" },
+{ "id": "CFE", "name": "Clermont-Ferrand", "label": "CFE", "group": "airport" },
+{ "id": "DZA", "name": "Dzaoudzi-Pamandzi", "label": "DZA", "group": "airport" },
+{ "id": "GNB", "name": "Grenoble-Alpes-Isère", "label": "GNB", "group": "airport" },
+{ "id": "CLY", "name": "Calvi Sainte-Catherine", "label": "CLY", "group": "airport" },
+{ "id": "EGC", "name": "Bergerac-Dordogne-Périgord", "label": "EGC", "group": "airport" },
+{ "id": "LIG", "name": "Limoges-Bellegarde", "label": "LIG", "group": "airport" },
+{ "id": "BOB", "name": "Bora-Bora", "label": "BOB", "group": "airport" },
+{ "id": "ETZ", "name": "Metz-Nancy-Lorraine", "label": "ETZ", "group": "airport" },
+{ "id": "RFP", "name": "Raiatea", "label": "RFP", "group": "airport" },
+{ "id": "BZR", "name": "Béziers - Cap d'Agde", "label": "BZR", "group": "airport" },
+{ "id": "SFG", "name": "Saint-Martin Grand-Case", "label": "SFG", "group": "airport" },
+{ "id": "LRH", "name": "La Rochelle-Île de Ré", "label": "LRH", "group": "airport" },
+{ "id": "FNI", "name": "Nîmes-Garons", "label": "FNI", "group": "airport" }];
+    var edges = [
+{ "from": "CDG", "to": "LDE", "label": "FOO-29-27"},
+{ "from": "CDG", "to": "PPT", "label": "FOO-29-17"},
+{ "from": "CDG", "to": "ETZ", "label": "FOO-29-38"},
+{ "from": "ORY", "to": "PPT", "label": "FOO-29-17"},
+{ "from": "NCE", "to": "ORY", "label": "FOO-29-1"},
+{ "from": "NCE", "to": "BOD", "label": "FOO-29-7"},
+{ "from": "NCE", "to": "BIA", "label": "FOO-29-16"},
+{ "from": "LYS", "to": "AJA", "label": "FOO-29-15"},
+{ "from": "LYS", "to": "BOB", "label": "FOO-29-37"},
+{ "from": "LYS", "to": "LRH", "label": "FOO-29-42"},
+{ "from": "LYS", "to": "PGF", "label": "FOO-29-29"},
+{ "from": "TLS", "to": "GEA", "label": "FOO-29-28"},
+{ "from": "TLS", "to": "BES", "label": "FOO-29-20"},
+{ "from": "BSLMLHEAP", "to": "BOD", "label": "FOO-29-7"},
+{ "from": "BOD", "to": "LYS", "label": "FOO-29-3"},
+{ "from": "NTE", "to": "BES", "label": "FOO-29-20"},
+{ "from": "NTE", "to": "NOU", "label": "FOO-29-24"},
+{ "from": "BVA", "to": "BOB", "label": "FOO-29-37"},
+{ "from": "BVA", "to": "FNI", "label": "FOO-29-43"},
+{ "from": "BVA", "to": "MRS", "label": "FOO-29-5"},
+{ "from": "LIL", "to": "GEA", "label": "FOO-29-28"},
+{ "from": "LIL", "to": "NOU", "label": "FOO-29-24"},
+{ "from": "LIL", "to": "BES", "label": "FOO-29-20"},
+{ "from": "MPL", "to": "MRS", "label": "FOO-29-5"},
+{ "from": "MPL", "to": "PUF", "label": "FOO-29-23"},
+{ "from": "BIA", "to": "LIG", "label": "FOO-29-36"},
+{ "from": "BIA", "to": "LIL", "label": "FOO-29-13"},
+{ "from": "BIA", "to": "LIL", "label": "FOO-29-13"},
+{ "from": "PPT", "to": "BIA", "label": "FOO-29-16"},
+{ "from": "PPT", "to": "DZA", "label": "FOO-29-32"},
+{ "from": "PPT", "to": "DZA", "label": "FOO-29-32"},
+{ "from": "SXB", "to": "PPT", "label": "FOO-29-17"},
+{ "from": "SXB", "to": "GNB", "label": "FOO-29-33"},
+{ "from": "SXB", "to": "BZR", "label": "FOO-29-40"},
+{ "from": "BIQ", "to": "RUN", "label": "FOO-29-11"},
+{ "from": "BES", "to": "PTP", "label": "FOO-29-10"},
+{ "from": "BES", "to": "CLY", "label": "FOO-29-34"},
+{ "from": "FSC", "to": "SXB", "label": "FOO-29-18"},
+{ "from": "FSC", "to": "GNB", "label": "FOO-29-33"},
+{ "from": "FSC", "to": "BIQ", "label": "FOO-29-19"},
+{ "from": "FSC", "to": "BZR", "label": "FOO-29-40"},
+{ "from": "RNS", "to": "NCE", "label": "FOO-29-2"},
+{ "from": "RNS", "to": "FDF", "label": "FOO-29-12"},
+{ "from": "PUF", "to": "CLY", "label": "FOO-29-34"},
+{ "from": "PUF", "to": "BOB", "label": "FOO-29-37"},
+{ "from": "PUF", "to": "BSLMLHEAP", "label": "FOO-29-6"},
+{ "from": "PUF", "to": "GNB", "label": "FOO-29-33"},
+{ "from": "NOU", "to": "CLY", "label": "FOO-29-34"},
+{ "from": "CAY", "to": "ETZ", "label": "FOO-29-38"},
+{ "from": "TLN", "to": "FNI", "label": "FOO-29-43"},
+{ "from": "TLN", "to": "RUN", "label": "FOO-29-11"},
+{ "from": "TLN", "to": "GEA", "label": "FOO-29-28"},
+{ "from": "LDE", "to": "MRS", "label": "FOO-29-5"},
+{ "from": "LDE", "to": "BSLMLHEAP", "label": "FOO-29-6"},
+{ "from": "LDE", "to": "CLY", "label": "FOO-29-34"},
+{ "from": "GEA", "to": "NTE", "label": "FOO-29-8"},
+{ "from": "GEA", "to": "LDE", "label": "FOO-29-27"},
+{ "from": "GEA", "to": "NOU", "label": "FOO-29-24"},
+{ "from": "GEA", "to": "LIG", "label": "FOO-29-36"},
+{ "from": "PGF", "to": "FSC", "label": "FOO-29-21"},
+{ "from": "PGF", "to": "LDE", "label": "FOO-29-27"},
+{ "from": "PGF", "to": "RFP", "label": "FOO-29-39"},
+{ "from": "CCF", "to": "BVA", "label": "FOO-29-9"},
+{ "from": "CFE", "to": "CDG", "label": "FOO-29-0"},
+{ "from": "CFE", "to": "LDE", "label": "FOO-29-27"},
+{ "from": "DZA", "to": "CDG", "label": "FOO-29-0"},
+{ "from": "DZA", "to": "PUF", "label": "FOO-29-23"},
+{ "from": "EGC", "to": "LYS", "label": "FOO-29-3"},
+{ "from": "EGC", "to": "CCF", "label": "FOO-29-30"},
+{ "from": "EGC", "to": "SXB", "label": "FOO-29-18"},
+{ "from": "EGC", "to": "MPL", "label": "FOO-29-14"},
+{ "from": "LIG", "to": "GNB", "label": "FOO-29-33"},
+{ "from": "LIG", "to": "NCE", "label": "FOO-29-2"},
+{ "from": "LIG", "to": "BOD", "label": "FOO-29-7"},
+{ "from": "ETZ", "to": "LIL", "label": "FOO-29-13"},
+{ "from": "BZR", "to": "CLY", "label": "FOO-29-34"},
+{ "from": "BZR", "to": "CAY", "label": "FOO-29-25"},
+{ "from": "BZR", "to": "PGF", "label": "FOO-29-29"},
+{ "from": "BZR", "to": "ORY", "label": "FOO-29-1"},
+{ "from": "LRH", "to": "LIL", "label": "FOO-29-13"},
+{ "from": "LRH", "to": "PPT", "label": "FOO-29-17"},];
+
+    options = { 
+      'physics': {
+        "barnesHut": {
+          "gravitationalConstant": -24950,
+          "centralGravity": 0,
+          "springLength": 75,
+          "springConstant": 0.035,
+          "avoidOverlap": 0.75
+        },
+        "minVelocity": 0.48
+      }
+    };
+
+    
+    drawNetwork("graph", nodes, edges,options,true);
+
+  </script>
+</body>
+</html>

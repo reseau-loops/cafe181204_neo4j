@@ -1,0 +1,74 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="../vis/vis.js"></script>
+      <link href="../vis/vis.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    <a href="/view/figures/graph-driver_work_in_project.html" target="_blank">figures/graph-driver_work_in_project.html</a>
+    <div id="4a6fe12a-fb48-4c14-a8aa-4f1f9b8a7cb4"></div>
+    <div id="configure"></div>
+
+    <script type="text/javascript">
+      var nodes = [{"id": "Vera Herman", "label": "Vera Herman", "group": "Person"}, {"id": "Albertine Desnoyers", "label": "Albertine Desnoyers", "group": "Person"}, {"id": "Josette Laforest", "label": "Josette Laforest", "group": "Person"}, {"id": "Val\u00e9rie Laforest", "label": "Val\u00e9rie Laforest", "group": "Person"}, {"id": "Heloise Dubois", "label": "Heloise Dubois", "group": "Person"}, {"id": "Darlene Herman", "label": "Darlene Herman", "group": "Person"}, {"id": "Jean Larson", "label": "Jean Larson", "group": "Person"}, {"id": "Elizabeth Herman", "label": "Elizabeth Herman", "group": "Person"}, {"id": "Bruce Larson", "label": "Bruce Larson", "group": "Person"}, {"id": "Sophie Laforest", "label": "Sophie Laforest", "group": "Person"}, {"id": "Melodie Dubois", "label": "Melodie Dubois", "group": "Person"}, {"id": "Cosette Audet", "label": "Cosette Audet", "group": "Person"}, {"id": "Arlette Bienvenue", "label": "Arlette Bienvenue", "group": "Person"}, {"id": "Madelene Cousteau", "label": "Madelene Cousteau", "group": "Person"}, {"id": "Gringalet", "label": "Gringalet", "group": "Project"}, {"id": "Alpha", "label": "Alpha", "group": "Project"}, {"id": "Cymbal", "label": "Cymbal", "group": "Project"}, {"id": "Mireille Audet", "label": "Mireille Audet", "group": "Person"}, {"id": "Jeanette Desnoyers", "label": "Jeanette Desnoyers", "group": "Person"}, {"id": "Andr\u00e9e Laforest", "label": "Andr\u00e9e Laforest", "group": "Person"}, {"id": "\u00c9dith Audet", "label": "\u00c9dith Audet", "group": "Person"}, {"id": "Leone Bienvenue", "label": "Leone Bienvenue", "group": "Person"}, {"id": "Tracey Herman", "label": "Tracey Herman", "group": "Person"}, {"id": "Csw2000", "label": "Csw2000", "group": "Project"}, {"id": "Noelle Dubois", "label": "Noelle Dubois", "group": "Person"}, {"id": "Tigre", "label": "Tigre", "group": "Project"}, {"id": "Marphisa Brochu", "label": "Marphisa Brochu", "group": "Person"}];
+      var edges = [{"from": "Heloise Dubois", "to": "Tigre"}, {"from": "\u00c9dith Audet", "to": "Csw2000"}, {"from": "Noelle Dubois", "to": "Gringalet"}, {"from": "Vera Herman", "to": "Cymbal"}, {"from": "Albertine Desnoyers", "to": "Alpha"}, {"from": "Tracey Herman", "to": "Csw2000"}, {"from": "Melodie Dubois", "to": "Cymbal"}, {"from": "Elizabeth Herman", "to": "Cymbal"}, {"from": "Marphisa Brochu", "to": "Alpha"}, {"from": "Mireille Audet", "to": "Gringalet"}, {"from": "Madelene Cousteau", "to": "Gringalet"}, {"from": "Jeanette Desnoyers", "to": "Csw2000"}, {"from": "Mireille Audet", "to": "Cymbal"}, {"from": "Melodie Dubois", "to": "Tigre"}, {"from": "Vera Herman", "to": "Alpha"}, {"from": "Albertine Desnoyers", "to": "Cymbal"}, {"from": "Josette Laforest", "to": "Csw2000"}, {"from": "Val\u00e9rie Laforest", "to": "Tigre"}, {"from": "Val\u00e9rie Laforest", "to": "Csw2000"}, {"from": "Noelle Dubois", "to": "Csw2000"}, {"from": "Josette Laforest", "to": "Tigre"}, {"from": "Vera Herman", "to": "Csw2000"}, {"from": "Arlette Bienvenue", "to": "Alpha"}, {"from": "Mireille Audet", "to": "Alpha"}, {"from": "Leone Bienvenue", "to": "Alpha"}, {"from": "Darlene Herman", "to": "Tigre"}, {"from": "Bruce Larson", "to": "Gringalet"}, {"from": "\u00c9dith Audet", "to": "Alpha"}, {"from": "Darlene Herman", "to": "Gringalet"}, {"from": "Andr\u00e9e Laforest", "to": "Alpha"}, {"from": "Heloise Dubois", "to": "Cymbal"}, {"from": "Jean Larson", "to": "Csw2000"}, {"from": "Cosette Audet", "to": "Tigre"}, {"from": "Albertine Desnoyers", "to": "Gringalet"}, {"from": "Tracey Herman", "to": "Gringalet"}, {"from": "Sophie Laforest", "to": "Cymbal"}, {"from": "Mireille Audet", "to": "Tigre"}];
+
+      var container = document.getElementById("4a6fe12a-fb48-4c14-a8aa-4f1f9b8a7cb4");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          configure: {
+            enabled: true,
+            filter: function (option, path) {
+                if (path.indexOf('physics') !== -1) {
+                  return true;
+                }
+                if (path.indexOf('layout') !== -1) {
+                  return true;
+                }
+                if (path.indexOf('smooth') !== -1 || option === 'smooth') {
+                  return true;
+                }
+                return false;
+              },
+            //container: undefined,
+            showButton: true
+          },
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'middle'
+              },
+              color: 'gray',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: false}
+          },
+          physics: {
+              enabled: true,
+              barnesHut: {
+                  centralGravity: 0.1,
+                  springLength: 55
+                  },
+              minVelocity: 0.75
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    
