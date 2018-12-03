@@ -2,6 +2,22 @@
 
 Café Loops du 4 décembre 2018
 
+## Virtualisation
+
+La virtualisation python est conseillée.
+
+Se mettre dans le répertoire projet à la racine
+
+    virtualenv -p python3.6 ./
+
+Activer la virtualisation
+
+    . ./bin/activate
+
+Descendre les dépendances
+
+    pip install - r requirements.txt
+
 ## Présentation
 
 Se mettre dans le répertore /docs
