@@ -8,6 +8,18 @@ avec Neo4J
 .headnote[Café Loops]
 
 ---
+class: inverse middle center
+
+
+Présentation   
+https://reseau-loops.github.io/cafe181204_neo4j/
+
+
+Git  
+https://github.com/reseau-loops/cafe181204_neo4j
+
+
+---
 name: what_is_a_graph
 # C'est quoi un "graphe" ?
 
@@ -84,12 +96,11 @@ Un peu d'histoire
 
 
 ---
-# La gestion des données
-Un problème vieux comme l'humanité
+# Le stockage des informations
 
 ## Guidé par les moyens technologiques et le coût.
-* argile, papirus, papier, ...
-* bandes magnétiques, disques, mémoire
+* Argile, papirus, papier, ...
+* Bandes magnétiques, disques, mémoire
 
 .left-column[
 .center[*Bandes magnétiques*]
@@ -104,6 +115,9 @@ Un problème vieux comme l'humanité
     <img src="images/ibm350.jpg" width="300px">
 </center>
 ]
+
+???
+Un problème vieux comme l'humanité.
 
 ---
 # Base graphe, un vieux concept
@@ -131,6 +145,7 @@ Un problème vieux comme l'humanité
 .footnote[.small[ [Cours "bases de données réseau et hiérarchiques" sur sgbd.developpez.com](https://sgbd.developpez.com/tutoriels/cours-complet-bases-de-donnees/?page=bases-de-donnees-reseaux-et-hierarchiques)]]
 
 ???
+
 Image http://www.cs.aucegypt.edu/~csci253/DBConcepts%20v2.htm
 * Accès aux données en mode **_navigationnel_**   
 en mentionnant les relations **_explicitement_**   
@@ -156,6 +171,8 @@ pour passer d'un _record_ à un autre.
 .footnote[.small[[SQL:2011](https://fr.wikipedia.org/wiki/SQL:2011)]]
 
 ???
+Vient avec l'avènement des disques durs abordables.
+
 Vision unifiée: [12 règles de CODD](https://fr.wikipedia.org/wiki/12_r%C3%A8gles_de_Codd)
 
 C'est devenue un standard de fait, et la majorité des 
@@ -212,8 +229,8 @@ L'ACIDité du SQL, devient un frein. Amazon, par exemple, constate rapidement de
 --
 
 ## Un manque de souplesse 
- * Schemas rigides
- * Evolutions de schéma parfois casse-tête
+ * Rigidité du schéma vs évolutions des fonctionnalités
+ * Evolutions de schémas parfois casse-tête
  * Guerre entre DBA (_Data Base Administrator_) et développeurs
 
 ???
@@ -296,11 +313,10 @@ Autant partir sur de nouvelles solutions.
 
 ## Passage de ACID à BASE
 * **ACID**
- * **A**tomicity &rarr; transaction
- * **C**onsistency &rarr; intégrité d'une transaction à une autre
- * **I**solation &rarr; pas d'interférence entre transactions
- * **D**urability &rarr; la pérénité est assurée, même en cas de défaillance
---
+ * **A**tomicity 
+ * **C**onsistency 
+ * **I**solation 
+ * **D**urability
 
 * **BASE**
  * **B**asically **A**vailable &rarr; disponibilité la plupart du temps
@@ -334,9 +350,12 @@ https://stackoverflow.com/questions/5040617/what-is-the-difference-between-a-gra
 En gros, une base graphe est plus flexible alors qu'une base réseau à plus de contraintes.
 Une base réseau a une notion de _nested_ avec une relation de _owner-member_
 
+---
+class: inverse middle center
+# Bases graphes, les usages
 
 ---
-# Les bases graphes, quels usages ?
+# Quand utiliser une base graphe ?
 
 ## Traitements des données hautement connectées entre elles
 * Avec un nombre indéterminé de liens entre entités 
@@ -344,11 +363,13 @@ Une base réseau a une notion de _nested_ avec une relation de _owner-member_
 * Quand la relation est aussi, voire plus importante que la donnée.
 
 ## Des modèles flexibles
-* Où le schéma et les relations se construisent au fur et à mesure des observations
+* Où schéma et relations se construisent au fur et à mesure.
 
 ## Besoins de performance de traversé de graphe
-* Algorithmes puissants et rapides (~ ms)
-* Analyse de très gros volume de données 
+* Algorithmes puissants et rapides (~ ms),
+* Analyse de très gros volume de données,
+* OLTP (online Transaction Processing),
+* OLAP (online Analysis Processing).
 
 ???
 
@@ -372,6 +393,7 @@ OLAP (online Analysis Processing)
 * Système de recommandation (produit, diagnostiques ),
 * Détection de fraude (circuit fermé),
 * Analyse d'impact de maintenance réseaux (SFR)
+
 ...
 
 ---
@@ -393,6 +415,7 @@ class: splash-grey center
 </center>
 
 https://fr.slideshare.net/neo4j/investigating-the-panama-papers-connections-with-neo4j-stefan-komar-neo4j
+
 ---
 class: inverse middle center
 # Effet tableau blanc
@@ -580,7 +603,7 @@ Series C rounds and onwards are for later stage and more established companies. 
 * 60 000 membres
 * 120 groupes 
 * https://www.meetup.com/topics/neo4j/all/
-
+  
 ## Community.neo4j.com
 * https://community.neo4j.com
 
@@ -635,8 +658,8 @@ for this express use."]]
 
 ## Des drivers
 
-* _Officiels_ : java, python, javascript, .Net.
-* _Community_ : Ruby, PHP, R, Go, Erlang, C/C++, Clojure, Perl, Haskell
+* _Officiels_ : java, python, javascript, .Net, Go.
+* _Community_ : Ruby, PHP, R, Erlang, C/C++, Clojure, Perl, Haskell
 
 --
 
@@ -1938,7 +1961,7 @@ Comparatif (https://neo4j.com/subscriptions/)
 * Auto reuse of deleted space
 * Property existence constraints
 * Cypher query tracing, monitoring and metrics
-* Node Key schema constraints
+* Node Key Schéma constraints
 
 ---
 # Ce qui fâche ?
@@ -1998,7 +2021,7 @@ class: inverse middle
 
 ---
 class: inverse middle center
-# Merci 
+# Questions ? 
 
 ---
 class: inverse middle center
