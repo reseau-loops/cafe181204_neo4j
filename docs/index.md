@@ -2044,6 +2044,7 @@ class: inverse middle center
 
 * https://stph.scenari-community.org/contribs/nos/Neo4j2/co/Neo4j-2.html
 * https://blog.octo.com/bases-de-donnees-graphes-un-tour-dhorizon/
+* https://cs.ulb.ac.be/public/_media/teaching/neo4jj_2017.pdf
 
 ---
 # Neo4j internals
