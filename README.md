@@ -20,7 +20,7 @@ Descendre les dépendances
 
 ## Présentation
 
-Se mettre dans le répertore /docs
+Se mettre dans le répertoire /docs
 
     python -m http.server
 
