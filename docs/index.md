@@ -18,6 +18,13 @@ https://reseau-loops.github.io/cafe181204_neo4j/
 Git  
 https://github.com/reseau-loops/cafe181204_neo4j
 
+Powered by  
+
+<a href="visjs.org">
+  <img src="images/visjs.jpg" width="50px">
+</a> 
+
+[remark.js](https://remarkjs.com/#1)
 
 ---
 name: what_is_a_graph
