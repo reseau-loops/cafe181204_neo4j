@@ -16,7 +16,7 @@ Activer la virtualisation
 
 Descendre les dépendances
 
-    pip install - r requirements.txt
+    pip install -r requirements.txt
 
 ## Présentation
 
