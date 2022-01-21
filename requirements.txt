@@ -12,7 +12,7 @@ docopt==0.6.2
 entrypoints==0.2.3
 idna==2.7
 ipykernel==5.1.0
-ipython==7.1.1
+ipython==7.16.3
 ipython-cypher==0.2.6
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
